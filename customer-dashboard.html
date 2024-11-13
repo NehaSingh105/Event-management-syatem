@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Dashboard</title>
+  <style>
+    .dashboard { max-width: 800px; margin: 5% auto; font-family: Arial, sans-serif; }
+    h2 { text-align: center; }
+    .btn { display: block; width: 100%; padding: 10px; margin: 10px 0; background-color: #ff5722; color: #fff; border: none; cursor: pointer; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <h2>Customer Dashboard</h2>
+    <button class="btn" onclick="requestCustomEvent()">Request Custom Event</button>
+
+    <h3>Available Events</h3>
+    <ul class="list-group">
+      <li class="list-group-item">
+        Event Title - Category <button onclick="bookEvent()">Book</button>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    function requestCustomEvent() {
+      window.location.href = 'custom-event-request.html';
+    }
+
+    function bookEvent() {
+      alert("Event has been booked.");
+    }
+  </script>
+</body>
+</html>

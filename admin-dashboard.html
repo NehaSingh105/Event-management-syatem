@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <style>
+    .dashboard { max-width: 800px; margin: 5% auto; font-family: Arial, sans-serif; }
+    h2 { text-align: center; }
+    .list-group { list-style: none; padding: 0; }
+    .list-group-item { display: flex; justify-content: space-between; padding: 10px; border-bottom: 1px solid #ddd; }
+    .btn { padding: 5px 10px; border: none; color: white; cursor: pointer; border-radius: 4px; }
+    .btn-block { background-color: #f44336; }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <h2>Admin Dashboard</h2>
+    <p>Total Active Event Managers: <span id="activeManagers">5</span></p>
+    <p>Total Active Consumers: <span id="activeConsumers">12</span></p>
+    
+    <h3>Event Managers</h3>
+    <ul class="list-group">
+      <li class="list-group-item">
+        Event Manager Name
+        <button class="btn btn-block" onclick="blockUser('Event Manager')">Block</button>
+      </li>
+    </ul>
+
+    <h3>Customers</h3>
+    <ul class="list-group">
+      <li class="list-group-item">
+        Customer Name
+        <button class="btn btn-block" onclick="blockUser('Customer')">Block</button>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    function blockUser(userType) {
+      alert(`${userType} has been blocked.`);
+    }
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Provider Dashboard</title>
+  <style>
+    .dashboard { max-width: 800px; margin: 5% auto; font-family: Arial, sans-serif; }
+    h2 { text-align: center; }
+    .btn { display: block; width: 100%; padding: 10px; margin: 10px 0; background-color: #2196F3; color: #fff; border: none; cursor: pointer; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <h2>Event Provider Dashboard</h2>
+    <button class="btn" onclick="openEventForm()">Create New Event</button>
+    
+    <h3>Your Events</h3>
+    <ul class="list-group">
+      <li class="list-group-item">
+        Event Title <button onclick="viewEvent()">View</button>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    function openEventForm() {
+      window.location.href = 'create-event.html';
+    }
+
+    function viewEvent() {
+      alert("View event details here.");
+    }
+  </script>
+</body>
+</html>
